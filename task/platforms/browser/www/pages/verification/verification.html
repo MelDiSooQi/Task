@@ -1,0 +1,33 @@
+﻿﻿﻿﻿<div id="verification" class="content" >
+
+	<!--div class="form">
+		<p>{{ 'verificationLabel' | translate }}</p>
+		
+		<md-input-container md-no-float class="md-block">
+			<input placeholder="{{ 'verificationPlaceHolder' | translate }}" >
+		</md-input-container>
+		
+	</div>
+	<div class="btnContainer">
+    	<div ng-button class="wpButton" id="btnNext" ng-click="vm.verifyBtnClick();$event.stopPropagation();">{{ 'verificationVerify' | translate }}</div>
+    </div-->
+    
+    <form name="vm.userForm" ng-submit="submitVerifyForm();$event.stopPropagation();" novalidate>
+
+        <!-- mobileNumber -->
+        <div class="form" ng-class="{ 'has-error' : vm.userForm.verificationCode.$invalid && !vm.userForm.verificationCode.$pristine }">
+            <p class="verificationLabel">{{ 'verificationLabel' | translate }}</p>
+            <input type="tel" name="verificationCode"  placeholder="{{ 'verificationPlaceHolder' | translate }}"  ng-model="vm.verificationCode" ng-minlength="6" ng-maxlength="6"   maxlength="6"  required>
+            
+            <p ng-show="vm.userForm.verificationCode.$invalid && !vm.userForm.verificationCode.$pristine && vm.userForm.verificationCode.$touched" class="help-block">You verification code is required.</p>
+            <p ng-show="vm.userForm.verificationCode.$error.minlength && !vm.userForm.verificationCode.$pristine" class="help-block">Enter Correct verification code.</p>
+            <p ng-show="vm.userForm.verificationCode.$error.maxlength && !vm.userForm.verificationCode.$pristine" class="help-block">Enter Correct verification code.</p>
+        </div>
+        
+        <div class="btnContainer">
+        	<button ng-button id="btnNext" type="submit" class="wpButton" ng-disabled="vm.userForm.$invalid">{{ 'verificationVerify' | translate }}</button>
+        </div>
+        
+    </form>
+
+</div>

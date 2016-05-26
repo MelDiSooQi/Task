@@ -1,0 +1,82 @@
+﻿﻿﻿﻿<div id="connect" class="content">
+    <p class="QutoaInfo">{{ 'getConnectedQutoaInfo' | translate }}</p>
+    <span class="ConnectionStatus NotActive" ng-style="{'color': vm.activeColor}">{{ vm.activeState | translate }}</span>
+    <div ng-button ng-click="vm.getConnected()" ng-class="vm.getClass()" id="btnGetConnected">{{ 'getConnectedButton' | translate }}</div>
+
+    <div ng-click="vm.connectionSettings" class="titleBar">{{ 'getConnectedSettingsLabel' | translate }}</div>
+    <md-radio-group id="connectionSettingsID" ng-switch on="vm.OS()"
+    ng-click="vm.setConnectionSettings(vm.connectionSettings)" 
+    ng-model="vm.connectionSettings"
+    ng-change="vm.changeConnected(vm.connectionSettings);"
+    >
+    <!-- ng-change="vm.changeConnected($event);$event.stopPropagation();" -->
+        <div ng-switch-when="Android">
+	        <div class="settingRow" >
+	            <div class="RadioLabel">{{ 'getConnectedSettingsAutoConnectTitle' | translate }}</div>
+	            <div class="RadioSubTittle">{{ 'getConnectedSettingsAutoConnectBrief' | translate }}</div>
+	            <md-radio-button id="AUTO_CONNECT" aria-label="AUTO_CONNECT" md-no-ink aria-checked="True" value="AUTO_CONNECT"  class="boost"></md-radio-button>
+	        </div>
+        </div>
+
+        <div class="settingRow">
+            <div class="RadioLabel">{{ 'getConnectedSettingsNotificationTitle' | translate }}</div>
+            <div class="RadioSubTittle">{{ 'getConnectedSettingsNotificationBrief' | translate }}</div>
+            <md-radio-button id="REQUEST_PERMISSION" aria-label="REQUEST_PERMISSION" md-no-ink value="REQUEST_PERMISSION"  class="boost"></md-radio-button>
+        </div>
+        <div class="settingRow">
+            <div class="RadioLabel">{{ 'getConnectedSettingsSwitcheTitle' | translate }}</div>
+            <div class="RadioSubTittle">{{ 'getConnectedSettingsSwitcheBrief' | translate }}</div>
+            <md-radio-button id="SWITCHED_OFF" aria-label="SWITCHED_OFF" md-no-ink value="SWITCHED_OFF" class="boost"></md-radio-button>
+        </div>
+    </md-radio-group>
+
+
+    <div class="titleBar">{{ 'getConnectedBasicConsumptionLabel' | translate }}</div>
+    <div class="pieChart">
+        <div class="percent">{{vm.percent1}}</div>
+        <pie-chart class="" data="vm.data1" options="vm.options"></pie-chart>
+    </div>
+
+    <div class="consumptionDetails">
+        <div class="row marginTopBottom">
+            <div class="usedColor"></div>
+            <h3 class="label">{{ 'getConnectedBasicConsumptionUsed' | translate }}</h3>
+            <span class="value">888 {{ 'getConnectedKiloByte' | translate }} </span>
+        </div>
+        <div class="row marginTopBottom">
+            <div class="remainingColor"></div>
+            <h3 class="label">{{ 'getConnectedBasicConsumptionRemaining' | translate }}</h3>
+            <span class="value">888 {{ 'getConnectedGigaByte' | translate }}</span>
+        </div>
+        <div class="row marginTopBottom">
+            <h3 class="label expirationLabel">{{ 'getConnectedBasicConsumptionExpiration' | translate }}</h3>
+            <span class="value">31/12/2016</span>
+        </div>
+    </div>
+
+
+    <div class="titleBar md-body-2">{{ 'getConnectedPremiumConsumption' | translate }}</div>
+    <div class="pieChart">
+        <div class="percent">{{vm.percent1}}</div>
+        <pie-chart class="boost" data="vm.data1" options="vm.options"></pie-chart>
+    </div>
+
+       <div class="consumptionDetails">
+           <div class="row marginTopBottom">
+               <div class="usedColor"></div>
+               <h3 class="label">{{ 'getConnectedBasicConsumptionUsed' | translate }}</h3>
+               <span class="value">888 {{ 'getConnectedKiloByte' | translate }}</span>
+           </div>
+           <div class="row marginTopBottom">
+               <div class="remainingColor"></div>
+               <h3 class="label">{{ 'getConnectedBasicConsumptionRemaining' | translate }}</h3>
+               <span class="value">400 {{ 'getConnectedMegaByte' | translate }}</span>
+           </div>
+           <div class="row marginTopBottom">
+               <h3 class="label expirationLabel">{{ 'getConnectedBasicConsumptionExpiration' | translate }}</h3>
+               <span class="value">31/12/2016</span>
+           </div>
+       </div>
+
+    <div ng-button ng-click="vm.clickPurchaseQuota();$event.stopPropagation();" id="btnPurchaseQuota">{{ 'getConnectedPurchaseButton' | translate }}</div>
+</div>

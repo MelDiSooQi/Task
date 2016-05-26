@@ -1,0 +1,71 @@
+<div id="notification" class="content">
+	<div class="tabs">
+		<div class="tabsHead" ng-click="vm.onTabChanged()">
+			<div id ="Notifications" 	class="head active">{{ 'getNotificationTab' | translate }}</div>
+			<div id ="Campaigns" 	 	class="head">{{ 'getCampaignsTab' | translate }}</div>
+			<div id ="barID" 			class="bar"></div>
+		</div>
+		<div id ="tabsContent" class="tabsContent">
+			<div class="tabContent" ng-switch on="vm.showNotifications">
+			
+				<div ng-switch-when="false" class="Nonotificaion">
+					<img src="images/notification/notified_Icon.png" />
+					<h3>{{ 'notificationNoNotificationYet' | translate }}</h3>
+				</div>
+				
+				<div ng-switch-when="true" id="{{notification.id}}" class="connectItem" ng-click="notification.click($event, $index);$event.stopPropagation();" ng-repeat="notification in vm.notifications()">
+					<div id="readSign" class="redBGContianer">
+						<div class="redBG" ng-show="{{notification.isReaded;}}"></div>
+					</div>
+					<div class="imgCont">
+						<img alt="Description" ng-src="{{notification.src}}"/>
+					</div>
+					<div class="txtCont">
+						<h3 class="label">{{ notification.title | translate }}</h3>
+						<span class="subDetails">{{ notification.description | translate }}</span>
+					</div>
+					<div class="timeCont">
+						<span class="date">{{notification.date}}</span>
+						<span class="time">{{notification.time}}</span>
+					</div>
+				</div>
+
+			</div>
+			<div class="tabContent" >
+
+				<div id="{{campaign.id}}" class="connectItem wpButton" ng-click="campaign.click($event, $index);$event.stopPropagation();" ng-repeat="campaign in vm.campaigns()">
+					<!-- <div class="redBGContianer">
+						<div class="redBG hidden"></div>
+					</div> -->
+					<div class="imgCont">
+						<img alt="Description" ng-src="{{campaign.src}}" />
+					</div>
+					<div class="txtCont">
+						<h3 class="label">{{ campaign.title | translate }}</h3>
+						<span class="subDetails">{{ campaign.description | translate }}</span>
+					</div>
+					<div class="timeCont">
+						<span class="date">{{campaign.date}}</span>
+						<span class="time">{{campaign.time}}</span> 
+					</div>
+				</div>
+				
+				<div class="connectItem wpButton" ng-click="vm.goDetails()">
+					<!-- <div class="redBGContianer"></div> -->
+					<div class="imgCont">
+						<img src="images/campaigns/1.jpg" />
+					</div>
+					<div class="txtCont">
+						<h3 class="label">{{ 'getCampaignsCampTitle' | translate }}</h3>
+						<span class="subDetails">{{ 'getNotificationTouch' | translate }}</span>
+					</div>
+					<div class="timeCont">
+						<span class="date">02/10/2015</span>
+						<span class="time">03:35pm</span> 
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>

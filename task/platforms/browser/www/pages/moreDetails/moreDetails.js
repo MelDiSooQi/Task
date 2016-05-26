@@ -1,0 +1,1 @@
+(function() {	"use strict";	angular.module("WIFIApp").controller("moreDetailsCtrl", [moreDetailsCtrl]);	function moreDetailsCtrl() {		var vm = this;	}})();

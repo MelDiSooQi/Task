@@ -1,0 +1,101 @@
+<div id="page2" class="content">
+	<div class="mainContaner" >
+		<div class="item" >
+
+			<div class="rewardsItem firstt wpButton">
+				<div class="imgCont">
+					<img ng-src="{{vm.employee().src}}" />
+				</div>
+				<div class="txtCont">
+					<h3 class="label">{{ vm.employee().title | translate }}</h3>
+					<span class="subDetails">{{ vm.employee().data["address"] | translate }}</span>
+				</div>
+			</div>
+		</div>
+
+<div class="item emplo" ng-click="vm.employee().click($event, $index);$event.stopPropagation();">
+
+			<div class="rewardsItem wpButton">
+				<div class="imgCont">
+				</div>
+				<div class="txtCont">
+					<h3 class="label">View Directory Reports</h3>
+				</div>
+				<div class="socialAction Facebook">
+				 <span class="Follow">{{ vm.employee().followers.length | translate }}</span>
+					<img class="btnNext" src="images/page1/btnNext.png" />
+				</div>
+			</div>
+		</div>
+
+		<div class="item emplo" >
+
+			<div class="rewardsItem wpButton">
+				<div class="imgCont">
+				</div>
+				<div class="txtCont">
+					<h3 class="label">Call Office</h3>
+					<span class="subDetails">{{ vm.employee().data["callOffice"] | translate }}</span>
+				</div>
+				<div class="socialAction Facebook">
+					<img class="phone" src="images/page2/phone.png" />
+				</div>
+			</div>
+		</div>
+
+<div class="item emplo" >
+
+			<div class="rewardsItem wpButton">
+				<div class="imgCont">
+				</div>
+				<div class="txtCont">
+					<h3 class="label">Call Cell</h3>
+					<span class="subDetails">{{ vm.employee().data["callCell"] | translate }}</span>
+				</div>
+				<div class="socialAction Facebook">
+					<img class="phone" src="images/page2/phone.png" />
+				</div>
+			</div>
+		</div>
+
+		<div class="item emplo" >
+
+			<div class="rewardsItem wpButton">
+				<div class="imgCont">
+				</div>
+				<div class="txtCont">
+					<h3 class="label">SMS</h3>
+					<span class="subDetails">{{ vm.employee().data["SMS"] | translate }}</span>
+				</div>
+				<div class="socialAction Facebook">
+					<img class="sms" src="images/page2/sms.png" />
+				</div>
+			</div>
+		</div>
+
+		<div class="item emplo" >
+
+			<div class="rewardsItem wpButton">
+				<div class="imgCont">
+
+				</div>
+				<div class="txtCont">
+					<h3 class="label">E-mail</h3>
+					<span class="subDetails">{{ vm.employee().data["email"] | translate }}</span>
+				</div>
+				<div class="socialAction Facebook">
+					<img class="mail" src="images/page2/mail.png" />
+				</div>
+			</div>
+		</div>
+
+
+		</div>
+	</div>
+
+	<!--div class="Nonotificaion">
+		<img src="images/rewardsIcon.png" />
+		<h3>No rewards yet</h3>
+	</div-->
+
+</div>

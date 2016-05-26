@@ -1,0 +1,29 @@
+﻿﻿﻿<div id="register" class="content">
+	<!--div class="form">
+		<p>{{ 'registerLabel' | translate }}</p>
+		<input ng-model="vm.mobileNumber" type="tel" placeholder="Mobile Number"/>
+	</div-->
+	<!--div class="btnContainer">
+		<div ng-button id="btnNext" class="wpButton"  ng-click="vm.registerBtnClick();$event.stopPropagation();">{{ 'registerContenu' | translate }}</div>
+	</div-->
+	
+	<form name="vm.userForm" ng-submit="submitRegisterForm();$event.stopPropagation();" novalidate>
+
+        <!-- mobileNumber -->
+        <div class="form" ng-class="{ 'has-error' : vm.userForm.name.$invalid && !vm.userForm.name.$pristine }">
+            <p class="registerLabel">{{ 'registerLabel' | translate }}</p>
+            <div class="mobileNumContainer">
+            	<p class="codeNumber">+201</p>
+            	<input type="tel" name="mobileNumber"  placeholder="{{ 'mobileNumberLabel' | translate }}"  ng-model="vm.mobileNumber" ng-minlength="9" ng-maxlength="9"  maxlength="9"  required>
+            </div>
+            <p ng-show="vm.userForm.mobileNumber.$invalid && !vm.userForm.mobileNumber.$pristine && vm.userForm.mobileNumber.$touched" class="help-block">You Mobile Number is required.</p>
+            <p ng-show="vm.userForm.mobileNumber.$error.minlength && !vm.userForm.mobileNumber.$pristine" class="help-block">Enter Correct Mobile Number.</p>
+            <p ng-show="vm.userForm.mobileNumber.$error.maxlength && !vm.userForm.mobileNumber.$pristine" class="help-block">Enter Correct Mobile Number.</p>
+        </div>
+        
+        <div class="btnContainer">
+        	<button ng-button id="btnNext" type="submit" class="wpButton" ng-disabled="vm.userForm.$invalid">{{ 'registerContenu' | translate }}</button>
+        </div>
+        
+    </form>
+</div>

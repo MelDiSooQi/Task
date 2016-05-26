@@ -1,0 +1,596 @@
+/* ----------- Galaxy Tab 10.1 ----------- */
+
+/* Portrait and Landscape */
+@media 
+  (min-device-width: 800px) 
+  and (max-device-width: 1280px) {
+
+}
+
+/* Portrait */
+@media 
+ (min-device-width: 800px) 
+  and (max-device-width: 800px) 
+  and (orientation: portrait) { 
+
+	.tabs .tabsContent .tabContent {
+	display: inline-block;
+	width: 99.8vw;
+	
+	height: 100%;
+	overflow-y: auto;
+	vertical-align:top;
+}
+
+img.purchaseQuotaPopupImg {
+    width: 9%;
+    
+    
+    margin-bottom: -17px;
+    margin-right: 5px;
+    display: inline !important;
+}
+
+.arabic #home .title {
+	font-size: 3.5em;
+	margin-top: 11.5vh;
+	font-family: DROIDKUFI-REGULAR;
+}
+
+
+.arabic .ServiceContainer {
+	color: white;
+	font-size: 32px;
+	overflow: hidden;
+}
+
+.arabic div#GetConnected .label {
+    width: 128px;
+}
+	.homeLogoContainer {
+    width: 265px;
+    height: 119px;
+    margin: 0px auto;
+}
+	
+	div#home span.icon-homeLogo {
+    border: 2px #6d6d6d solid;
+    font-size: 218px;
+    padding-top: 25px;
+    padding-left: 58px;
+    padding-bottom: 19px;
+    padding-right: 28px;
+    color: #6d6d6d;
+    box-shadow: 0 0px 0px 0 #6D6D6E, 2px 1px 5px -1px #6d6d6d;
+}
+
+#home .title {
+	text-align: center;
+	font-size: 4.3em;
+	margin-top: 12.5vh;
+	font-family: NEO_TECH_STD_REGULAR;
+}
+
+	#leftCol .ServiceContainer {
+	position: relative;
+	margin: 3px 0px 3px 3px;
+	height: 96.3%;
+	}
+	
+	.ServiceContainer {
+	color: white;
+	font-size: 29px;
+	overflow: hidden;
+}
+
+.dataContainer {
+    width: 203px;
+    height: 60px;
+    margin: auto auto !important;
+    padding-top: 17%;
+    padding-left: 14px;
+}
+
+.arabic .dataContainer {
+    margin: auto auto !important;
+    padding-top: 17%;
+    padding-right: 5px;
+    width: 207px;
+    height: 60px;
+}
+
+.arabic div#GetLocation .label {
+    width: 100% !important;
+    position: absolute;
+    margin-left: -64% !important;
+}
+.loificationLabel {
+    position: absolute;
+    border-radius: 50%;
+    width: 51px;
+    height: 50px;
+    background-color: #feae00;
+    background: linear-gradient(135deg, #feae00, #CA8C09);
+    border: 1px #E8A002 solid;
+    padding-top: 11px;
+    display: inline !important;
+    margin-left: 168px;
+    margin-top: -42px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 90%;
+    box-shadow: 0 0px 0px 0 #feae00, 4px 2px 5px 0px #feae00;
+}
+
+.arabic .loificationLabel {
+    border-radius: 50%;
+    width: 51px !important;
+    height: 51px !important;
+    margin-right: 50% !important;
+    margin-top: -49px;
+}
+
+img.connect {
+    width: 58%;
+    margin-left: -69px;
+    margin-top: -36px;
+}
+
+.arabic img.connect {
+    margin-right: -141px;
+    margin-top: -35px;
+    width: 70%;
+}
+
+img.notified {
+    width: 44%;
+    Z-INDEX: 0;
+    margin-left: -33%;
+    margin-top: -20%;
+    display: inline !important;
+}
+
+.arabic img.notified {
+    margin-top: -26%;
+    width: 58%;
+    margin-right: -69%;
+}
+
+
+img.rewards {
+    width: 57%;
+    margin-left: -64px;
+    margin-top: -48px;
+}
+
+.arabic img.rewards {
+    margin-right: -161px;
+    margin-top: -57px;
+    width: 78%;
+}
+
+.redBGContianer {
+    background: #702f89;
+    height: 75px !important;
+    width: 11px;
+    float: left;
+    margin-left: -2px;
+    margin-top: -1px;
+    margin-right: 7px;
+    
+}
+
+h3.label {
+	float: left;
+	margin: 0px;
+	font-size: 30px;
+	margin-top: 2px;
+	
+	font-weight: normal;
+}
+
+.arabic #connect .consumptionDetails .value {
+	float: left;
+	margin-right: 0px;
+	margin-left: 6px;
+	
+	width: auto;
+	text-align: right;
+	font-size: 22px;
+}
+
+.ngButton {
+	text-align: center;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 40px;
+	padding: 0px 10px;
+	min-width: 50px;
+	max-width: 300px;
+	display: block;
+	margin: 0 auto;
+	height: 53px;
+	min-height: 34px;
+	-webkit-transition: all ease-in 200ms;
+	-moz-transition: all ease-in 200ms;
+	-ms-transition: all ease-in 200ms;
+	-o-transition: all ease-in 200ms;
+	transition: all ease-in 200ms;
+	box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.26);
+	border-radius: 3px;
+	
+}
+
+#btnGetConnected, #btnPurchaseQuota {
+	background: #009899;
+	color: white;
+	font-size: 28px;
+	font-weight: bold;
+	padding: 8px;
+	width: 300px;
+	margin: 8px auto;
+	
+	display: block;
+}
+
+.arabic #btnPurchaseQuota {
+    margin-top: 58px;
+}
+
+.arabic #connect .RadioLabel {
+	padding-left: 0;
+	padding-right: 31px;
+}
+
+#connect .RadioSubTittle {
+	width: 85%;
+	line-height: 1.5em;
+	font-size: 1.9em;
+	padding-top: 6px;
+	color: #494949;
+	margin-left: -1px;
+	margin-right: 31px;
+}
+
+#connect .QutoaInfo {
+	width: 80%;
+	text-align: center;
+	margin: 20px auto;
+	font-size: 30px;
+	color: #1c1c1c;
+	font-weight: bold;
+}
+
+#connect .ConnectionStatus {
+	display: block;
+	width: 100%;
+	text-align: center;
+	color: #009899;
+	font-weight: bold;
+	font-size: 30px;
+}
+
+.header {
+	text-align: center;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	height: 55px;
+	font-size: 1.8em;
+	z-index: 100;
+	line-height: 2.6em;
+	color: #fff;
+}
+
+.header .headTitle {
+	position: absolute;
+	left: 55px;
+	right: 55px;
+	top: -5px;
+	bottom: 0;
+	text-align: center;
+	font-weight: bold;
+}
+
+.header .backBtn {
+	height: 58px;
+	width: 58px;
+	z-index: 100;
+	padding-left: 11px;
+	padding-right: 16px;
+	padding-top: 8px;
+	padding-bottom: 10px;
+}
+
+.arabic .header .backBtn {
+	padding-left: 4px !important;
+	padding-right: 20px !important;
+}
+
+img.helpIcon {
+    width: 50px;
+    height: 55px;
+    padding-top: 12px;
+    padding-right: 14px;
+    padding-left: 3px;
+    padding-bottom: 11px;
+}
+
+.arabic img.helpIcon {
+    padding-right: 3px !important;
+    padding-left: 14px !important;
+}
+
+#rewards .Guest h3, #rewards .Guest p {
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	width: 80vw;
+	margin: 15px auto;
+	color: #494949;
+}
+
+div.FBLoginbtnContainer {
+    position: absolute;
+    
+    width: 33%;
+    margin-top: 60px;
+}
+
+#rewards #btnLoginFB{
+	background: #4A6EA9 url("../images/sign-in-facebook.ico") no-repeat;
+	background-size: 42px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 23px;
+	text-transform: none;
+	padding-left: 32px;
+	padding-top: 8px;
+	width: 300px;
+	background-position-y: 5px;
+	background-position-x: 14px;
+}
+
+#rewards #btnLoginFB.ng-click-active
+{
+	padding-top: 8px;
+    box-shadow: 0 0px 0px 0 #4A6EA9, 0px 0px 10px 3px #4A6EA9 !important;
+}
+
+div.twitterLoginbtnContainer {
+    position: absolute;
+    width: 33%;
+    margin-top: 60px;
+}
+
+#rewards #btnLoginTwitter{
+	background: #33ccff url("../images/rewards/twitter_icon_white.png") no-repeat;
+	background-size: 42px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 24px;
+	text-transform: none;
+	padding-left: 32px;
+	padding-top: 8px;
+	width: 300px;
+	background-position-y: 5px;
+	background-position-x: 17px;
+}
+
+#rewards #btnLoginTwitter.ng-click-active
+{
+	padding-top: 8px;
+    box-shadow: 0 0px 0px 0 #33ccff, 0px 0px 10px 3px #33ccff !important;
+}
+
+div.instagarmLoginbtnContainer {
+    position: absolute;
+    width: 33%;
+    margin-top: 60px;
+}
+
+#rewards #btnLoginInstagram{
+	background: #8B7D68 url("../images/rewards/instagram-icon512.png") no-repeat;
+	background-size: 39px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 22px;
+	text-transform: none;
+	padding-left: 41px;
+	padding-top: 8px;
+	width: 300px;
+	background-position-y: 7px;
+	background-position-x: 16px;
+}
+
+#rewards #btnLoginInstagram.ng-click-active
+{
+	padding-top: 8px;
+    box-shadow: 0 0px 0px 0 #8B7D68, 0px 0px 10px 3px #8B7D68 !important;
+}
+
+#notification .connectItem .timeCont {
+	min-width: 89px;
+	max-width: 89px;
+	font-weight: 400;
+	float: right;
+	margin-top: 13px;
+	text-align: right;
+	margin-right: 9px;
+	margin-left: 0px;
+}
+
+.arabic #notification .timeCont {
+	float: left;
+	text-align: left !important;
+	margin-right: 0px;
+	margin-left: 4px;
+}
+
+span.time, span.date {
+	width: 100%;
+	text-align: right;
+	line-height: 16px;
+	font-size: 17px;
+}
+
+.txtCont .label {
+    width: 600px;
+    font-size: 25px;
+    font-weight: bold !important;
+}
+
+span.subDetails {
+	float: left;
+	width: 100%;
+	font-size: 26px;
+	font-weight: normal !important;
+}
+
+#notification .connectItem .txtCont {
+	width: auto;
+	min-width: 600px;
+	max-width: 600px;
+	font-weight: 400;
+	padding-top: 2px;
+	padding-left: 1px;
+	padding-bottom: 25px;
+}
+
+#maps input#searchInput {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	height: 36px;
+	display: block;
+	margin-top: 8px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 27px !important;
+	font-weight: normal !important;
+	background: rgba(255, 255, 255, 0);
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 2px;
+	color: #444;
+	width: 91%;
+}
+
+#maps select#filter01, #maps select#filter02 {
+    width: 45%;
+    
+    border: 1px solid #ccc;
+	border-radius: 3px;
+    height: 36px;
+    margin-top: 9px;
+	margin-left: auto;
+	margin-right: auto;
+    font-size: 27px !important;
+	font-weight: normal !important;
+	background: rgba(255, 255, 255, 0);
+	padding-left: 10px;
+	padding-right:10px !important;
+	color: #444;
+
+}
+
+#sideBarCont .item {
+	max-width: 39%;
+	min-width: 39%;
+	position: relative;
+	height: 58px;
+	margin-top: 14px;
+	padding-bottom: 5px;
+	padding-top: 0px;
+	padding-right: 38px;
+	padding-left: 5px;
+	border-radius: 5px;
+	border-bottom: 1px solid #eee;
+}
+
+#sideBarCont.arabic .item div {
+	padding-right: 29px;
+	left: 10px;
+	right: 20%;
+	text-align: right;
+}
+
+div#sideBarCont .item.ng-scope img {
+	width: 40px;
+}
+
+#sideBarCont .item div {
+	position: absolute;
+	padding-left: 4px;
+	padding-top: 5px;
+	right: 10px;
+	left: 20%;
+	top: 0px;
+	bottom: 0px;
+	font-size: 30px;
+	font-weight: 300;
+	text-align: left;
+	font-weight: bold;
+}
+
+.arabic .forBack {
+    padding-left: 14px !important;
+    padding-right: 0px !important;
+}
+
+img.forBack {
+    height: 55px;
+    width: 50px;
+    z-index: 100;
+    padding-left: 6px;
+    padding-right: 20px;
+    padding-top: 13px;
+    padding-bottom: 10px;
+}
+
+div#moreDetails p.MoreDetailsTXT {
+	width: 80vw;
+	text-align: center;
+	margin: 30px auto;
+	font-size: 26px;
+}
+
+#settings .Title {
+	width: 75%;
+	font-size: 30px;
+	color: #1c1c1c;
+	font-weight: bold;
+}
+
+
+#settings md-switch .switchTitle {
+	padding-left: 20px;
+	font-size: 30px;
+	line-height: 1.4em;
+	padding-top: 13px;
+	color: #1c1c1c;
+	font-weight: bold;
+	white-space: normal;
+}
+
+#settings md-switch .switchCaption {
+	padding-left: 20px;
+	width: 96%;
+	line-height: 26px;
+	font-size: 24px;
+	color: #494949;
+	margin-left: -1px;
+	white-space: normal;
+}
+
+
+
+}
+
+/* Landscape */
+@media 
+  (max-device-width: 1280px) 
+  and (orientation: landscape) { 
+
+}

@@ -1,0 +1,27 @@
+<div id="purchaseQuotaPopup" class="confirm">
+  <form name="vm.userForm" ng-submit="submitVerifyForm();$event.stopPropagation();" novalidate>
+
+        <!-- mobileNumber -->
+        <div class="form" ng-class="{ 'has-error' : vm.userForm.purchaseQuotaCode.$invalid && !vm.userForm.purchaseQuotaCode.$pristine }">
+            <h1 class="titleLabel">{{vm.title() | translate }}</h1>
+            <p class="descriptionLabel">{{vm.description() | translate }}</p>
+            
+            <div class="inputContainer">
+	            <img class="purchaseQuotaPopupImg" src="images/connected/cash-512-colored.png"/>
+	            <input class="purchaseQuotaInput" type="tel" name="purchaseQuotaCode" placeholder="{{ 'getConnectedPurchaseQuotaPlaceHolder' | translate }}"  ng-model="vm.purchaseQuotaCode" ng-change="vm.purchaseQuotaCodeChanged(vm.purchaseQuotaCode);" ng-minlength="13" ng-maxlength="13"   maxlength="13"  required>
+            </div>
+            
+            <p ng-show="vm.userForm.purchaseQuotaCode.$invalid && !vm.userForm.purchaseQuotaCode.$pristine && vm.userForm.purchaseQuotaCode.$touched" class="error help-block">You voucher number is required.</p>
+            <p ng-show="vm.userForm.purchaseQuotaCode.$error.minlength && !vm.userForm.purchaseQuotaCode.$pristine" class="error help-block">Enter Correct voucher number.</p>
+            <p ng-show="vm.userForm.purchaseQuotaCode.$error.maxlength && !vm.userForm.purchaseQuotaCode.$pristine" class="error help-block">Enter Correct voucher number.</p>
+        </div>
+        
+        <div class="btnContainer">
+        	<button id='cancelPopup' ng-click="vm.cancelPopup();$event.stopPropagation();">{{vm.cancel() | translate }}</button>
+  			<button id='confirmPopup' type="submit" ng-click="vm.confirmPopup();$event.stopPropagation();" ng-disabled="vm.userForm.$invalid" autofocus>{{vm.confirm() | translate }}</button>
+        </div>
+        
+        <div class="hidden hiddenLayer"></div>
+        
+    </form>
+</div>

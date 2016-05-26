@@ -1,0 +1,114 @@
+﻿﻿﻿﻿﻿<div id="maps" class="content">
+	<div id="locationFilterContainer" class="tabs">
+		<div class="tabsHead">
+			<div class="mapTabs">
+				<div  ng-model="vm.all" id="allBtn" class="head active mapfilterBtns" ng-click="vm.filterMarker(vm.all);$event.stopPropagation();">
+					<div class="allLabel">
+						{{ 'MapFiltersBtnsTitles.All' | translate }}
+					</div>
+				</div>
+				<div ng-model="vm.mall"  id="mallBtn" class="head mapfilterBtns" ng-click="vm.filterMarker(vm.mall);$event.stopPropagation();">
+					<img src="images/Mapicns/mall.png" />
+					{{ 'MapFiltersBtnsTitles.Mall' | translate }}
+				</div>
+				<div  ng-model="vm.clinc" id="hospitalBtn" class="head mapfilterBtns" ng-click="vm.filterMarker(vm.clinc);$event.stopPropagation();">
+					<img src="images/Mapicns/clinc.png" />
+					{{ 'MapFiltersBtnsTitles.Hospital' | translate }}
+				</div>
+				<div  ng-model="vm.club" id="clubBtn" class="head mapfilterBtns" ng-click="vm.filterMarker(vm.club);$event.stopPropagation();">
+					<img src="images/Mapicns/club.png" />
+					{{ 'MapFiltersBtnsTitles.Club' | translate }}
+				</div>
+				<div  ng-model="vm.resturant" id="resturantBtn" class="head mapfilterBtns" ng-click="vm.filterMarker(vm.resturant);$event.stopPropagation();">
+					<img src="images/Mapicns/resturant.png" />
+					{{ 'MapFiltersBtnsTitles.Restaurant' | translate }}
+				</div>
+				<div ng-model="vm.school"  id="universityBtn" class="head mapfilterBtns" ng-click="vm.filterMarker(vm.school);$event.stopPropagation();">
+					<img src="images/Mapicns/school.png" />
+					{{ 'MapFiltersBtnsTitles.University' | translate }}
+				</div>
+				<div  ng-model="vm.cafee" id="cafeBtn" class="head mapfilterBtns" ng-click="vm.filterMarker(vm.cafee);$event.stopPropagation();">
+					<img src="images/Mapicns/cafee.png" />
+					{{ 'MapFiltersBtnsTitles.Cafe' | translate }}
+				</div>
+				<div  ng-model="vm.market" id="shopBtn" class="head mapfilterBtns" ng-click="vm.filterMarker(vm.market);$event.stopPropagation();">
+					<img src="images/Mapicns/market.png" />
+					{{ 'MapFiltersBtnsTitles.Shop' | translate }}
+				</div>
+				<div class="bar hidden"></div>
+			</div>
+			<div id="filterInputsContainer">
+			
+					<input id="searchInput" placeholder="{{ 'MapFiltersBtnsTitles.input' | translate }}" >
+		<select id="filter01">
+			<option value="0" selected disabled>{{ 'MapFiltersBtnsTitles.option0' | translate }}</option>
+			<option value="1" >القاهرة</option>
+			<option value="2" >الأسكندرية</option>
+			<option value="3" >أسوان</option>
+			<option value="4" >الأقصر</option>
+		</select>
+		<select id="filter02">
+			<option value="0" selected disabled>{{ 'MapFiltersBtnsTitles.option1' | translate }}</option>
+			<option value="1" >مدينة نصر</option>
+			<option value="2" >الحي الخامس</option>
+			<option value="3" >التحرير</option>
+			<option value="4" >الهرم</option>
+		</select>
+		</div>
+		</div>
+		<div class="tabsContent">
+			<div class="tabContent">
+			</div>
+			<div class="tabContent">
+			</div>
+			<div class="tabContent">
+			</div>
+			<div class="tabContent">
+			</div>
+			<div class="tabContent">
+			</div>
+			<div class="tabContent">
+			</div>
+			<div class="tabContent">
+			</div>
+			<div class="tabContent">
+			</div>
+		</div>
+
+	</div>
+    <div ng-switch on="vm.OS()" style="position: absolute;  left: 0px;  right: 0px;  top: 147px;  bottom: 0px; ">
+        <div ng-switch-when="Windows Phone">
+            <div data-ng-init="vm.passParam()">
+                <iframe id="mapIframe" src="ms-appx-web:///www/default/pages/maps/map.html" style="position: absolute; width: 100%; height: 100%;"></iframe>
+            </div>
+        </div>
+        <div ng-switch-default id=map style="width: 100%; height: 100%">
+            <ui-gmap-google-map
+             	center		='vm.map.center()'
+              	zoom		='vm.map.zoom()'
+              	draggable	="true"
+              	options		="vm.mapOptions"
+              	style		="width: 100%; height: 100%">
+	            <ui-gmap-markers
+        	         class = "marker"
+		             click	="vm.onClick"
+		             events	="vm.markerEvents"
+		             options="vm.markerOptions"
+		             models	="vm.markers"
+		             coords	="'self'"
+		             icon	="'icon'">
+		            <ui-gmap-windows 
+		            	class = "markerWindowContainer"
+		            	options	="vm.windowOptions"
+		             	show	="show">
+		              	  <div ng-non-bindable class = "markerWindow">
+			              	  <h2>{{title}}</h2>
+			              	  </br>
+			              	  {{description}}
+		              	  </div>
+	            	</ui-gmap-windows>
+	        	</ui-gmap-markers>
+            </ui-gmap-google-map>
+        </div>
+    </div>
+</div>

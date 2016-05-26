@@ -1,0 +1,34 @@
+<div id="page1" class="content">
+<div id="mainSearchContaner">
+	<div id="serchContainer">
+		<div id="filterInputsContainer">	
+		<input id="searchInput" ng-model="searchText" placeholder="{{ 'Search' | translate }}" >
+		</div>
+	</div>
+</div>
+	<div class="mainContaner" >
+		<div class="item" ng-click="item.click($event, $index, item.id);$event.stopPropagation();" ng-repeat="item in vm.items() | filter:searchText | filter:item.title">
+
+			<div class="rewardsItem wpButton" ng-click="vm.goDetails()">
+				<div class="imgCont">
+					<img ng-src="{{item.src}}" />
+				</div>
+				<div class="txtCont">
+					<h3 class="label">{{ item.title | translate }}</h3>
+					<span class="subDetails">{{ item.description | translate }}</span>
+				</div>
+				<div class="socialAction Facebook">
+				 <span class="Follow">{{ item.followers.length | translate }}</span>
+					<img src="images/page1/btnNext.png" />
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+
+	<!--div class="Nonotificaion">
+		<img src="images/rewardsIcon.png" />
+		<h3>No rewards yet</h3>
+	</div-->
+
+</div>

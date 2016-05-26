@@ -1,0 +1,51 @@
+﻿﻿﻿﻿
+<div id="home" class="content">
+	<!--<div class="hero"></div>
+    <div class="homeCont"></div>-->
+	<div class="hero">
+		<div class="Cont">
+			<!--div id="HomeLogo"-->
+				<!--<img src="images/homeLogo.png" />-->
+				
+			<!--/div-->
+			<div class="homeLogoContainer">
+			<span class="icon-homeLogo Logo"></span>
+			</div>
+			<div class="title">{{ 'homeEtisalatHotSpot' | translate }}</div>
+			
+		</div>
+	</div>
+	<div class="gridCont">
+		<div id="leftCol">
+			<div id="GetLocation" class="wpButton ServiceContainer"
+				ng-click="vm.goLocation()">
+					<div class="label">{{ 'homeGetLocation' | translate }}</div>
+					<img id="getLocation" src="images/location.png"/>
+			</div>
+		</div>
+		<div id="rightCol">
+			<div id="GetConnected" class="wpButton ServiceContainer"
+				ng-click="vm.goConnect()">
+				<div class="dataContainer">
+					<div class="label">{{ 'homeGetConnected' | translate }}</div>
+					<img class="connect" src="images/connected.png"/>
+				</div>
+			</div>
+			<div id="GetNotification" class="wpButton ServiceContainer"
+				ng-click="vm.goNotification()">
+				<div class="dataContainer">
+					<div class="label">{{ 'homeGetNotified' | translate }}</div>
+					<div class="loificationLabel" ng-show="{{vm.showNotifications;}}">{{vm.notificationsNumber}}</div>
+					<img class="notified" src="images/notified.png"/>
+				</div>
+			</div>
+			<div id="GetRewards" class="wpButton ServiceContainer"
+				ng-click="vm.goRewards()">
+				<div class="dataContainer">
+					<div class="label">{{ 'homeGetRewarded' | translate }}</div>
+					<img class="rewards" src="images/rewarded.png"/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
