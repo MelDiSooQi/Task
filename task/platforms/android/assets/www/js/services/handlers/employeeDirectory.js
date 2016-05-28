@@ -62,26 +62,6 @@
 		var createitems = function()
 		{
 			items = [];
-			/*var itemsTemp = store.get("items");
-			if(itemsTemp != null)
-			{
-				for(var i=0 ; i < itemsTemp.length ; i++)
-				{
-					items.push(new cell(  itemsTemp[i].id
-														, itemsTemp[i].title
-														, itemsTemp[i].description
-														, itemsTemp[i].src
-														, itemsTemp[i].followers//true
-														, getOnClickCallBack
-														, itemsTemp[i].date
-														, itemsTemp[i].time));
-				}
-				items.push(new cell(itemsTemp.length,"getcellNot", "getcellTouch", "images/faces/"+i+".jpg"	,true , onClickCallBack, "02/10/2015", "03:35pm"));
-			}
-			else
-			{
-				items.push(new cell(0,"getcellNot", "getcellTouch", "images/faces/1.jpg"	,true , onClickCallBack, "02/10/2015", "03:35pm"));
-			}*/
 			
 			items = [];
 			if(store.get("items") != null)
@@ -120,8 +100,6 @@
 		{
 			createitems();
 			var items = [];
-			
-			//items = getitems();
 			
 			if(items.length == 0)
 			{
