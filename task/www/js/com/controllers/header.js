@@ -58,6 +58,6 @@
         //close busy Indicator (Splach Screen to load)
         $timeout(function(){
             busyIndicator.hide();
-        },2500);
+        },1000);
     }
 })();

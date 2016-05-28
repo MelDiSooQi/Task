@@ -4,14 +4,14 @@
 	<div id="serchContainer">
 		<div id="filterInputsContainer">	
 		<input  type="text" id="searchInput" ng-model="searchText" placeholder="{{ 'Search' | translate }}" >
-			<div class="socialAction Facebook" ng-click="vm.add();$event.stopPropagation();">
+			<div class="socialAction Facebook" ng-click="vm.add();">
 					<img class="add" src="images/page1/add.png" />
 			</div>
 		</div>
 	</div>
 </div>
 	<div class="mainContaner" >
-		<div class="item" ng-click="item.click($event, $index, item.id);$event.stopPropagation();" ng-repeat="item in vm.items() | filter:{ title: searchText }">
+		<div class="item" ng-click="item.click($event, $index, item.id);" ng-repeat="item in vm.items() | filter:{ title: searchText }">
 
 			<div class="rewardsItem wpButton">
 				<div class="imgCont">

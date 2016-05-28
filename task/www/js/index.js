@@ -78,7 +78,7 @@ var winJS = WinJS !== undefined ? WinJS : null;
         function (languageHandler, pagesHandler)
          {
     		pagesHandler.resolvePagesConfigs();
-            FastClick.attach(document.body);
+            //FastClick.attach(document.body);
         }
     ]);
 })();

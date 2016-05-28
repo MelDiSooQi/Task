@@ -19,16 +19,32 @@
 
 package io.cordova.hellocordova;
 
+import android.annotation.TargetApi;
+import android.content.pm.ApplicationInfo;
+import android.os.Build;
 import android.os.Bundle;
+import android.webkit.WebView;
+
 import org.apache.cordova.*;
 
+@TargetApi(Build.VERSION_CODES.KITKAT)
 public class MainActivity extends CordovaActivity
 {
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        
         // Set by <content src="index.html" /> in config.xml
         loadUrl(launchUrl);
+        
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WebView.setWebContentsDebuggingEnabled(true);
+        }
+        
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            if (0 != (getApplicationInfo().flags &= ApplicationInfo.FLAG_DEBUGGABLE))
+            { WebView.setWebContentsDebuggingEnabled(true); }
+          }
     }
 }
