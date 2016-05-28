@@ -160,7 +160,7 @@
             resolvePagesConfigs	: resolvePagesConfigs,
             getCurrentPage		: getCurrentPage,
             getPageProperty		: getPageProperty,
-            goBack				: goBack
+            goBack				: onBackButton
         }
     }
 
