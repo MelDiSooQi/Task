@@ -40,10 +40,10 @@
         {
         	transform(true);
         	
-        	title 		= undefined;
-        	description	= undefined;
-        	confirm 	= undefined;
-        	cancel		= undefined;
+        	title 		 = undefined;
+        	description	 = undefined;
+        	confirm 	 = undefined;
+        	cancel		 = undefined;
         	employerName = undefined;
             jobPosition  = undefined;
             address      = undefined;

@@ -11,19 +11,25 @@
     {
       var vm = this;
 
-      //employeeDirectory.createitems();
+      //get Data from employeeDirectory.js
       vm.items  = employeeDirectory.getitems;
 
+      // initialize click on element
       var onClick = function($event, $index, id)
-    {
-      store.set("indexOpened", id);
-      $location.path('/page2');
-    }
+      {
+        //add to local storage  user id to use in next screen
+        store.set("indexOpened", id);
+        //to go to next screen
+        $location.path('/page2');
+      }
+    //add onClick() to callback function
     employeeDirectory.setOnClickCallBack(onClick);
 
+    // add function for adding employee to recordes with opening pop-up to get data
     vm.add = function()
     {
-      popupHandler.titleAndDescription( "Employee Directory", "Add Employee");
+        //create popup
+        popupHandler.titleAndDescription( "Employee Directory", "Add Employee");
         
         popupHandler.popupBtn1("Add",
         function()
@@ -45,11 +51,12 @@
             || SMS          != undefined
             || email        != undefined)
             {
+              // add employee data to local storage
               employeeDirectory.addEmpolyee(name, jobPosition, address, callOffice, callCell, SMS, email);    
             }
 
           
-
+          // open sucess popup
           setTimeout(function(){openNewPopup();}, 0);
         });
         
@@ -61,6 +68,7 @@
         popupHandler.show("addEmployeePopup");
     }
 
+    // success popup
     var openNewPopup = function()
     {
       $route.reload();

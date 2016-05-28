@@ -43,10 +43,9 @@ var winJS = WinJS !== undefined ? WinJS : null;
             $compileProvider.imgSrcSanitizationWhitelist('images/');
 
             /*
-            * configurations of $translateProvider - setting locale source
-            * and mechanism - setting default language
-            */
-
+             * configurations of $translateProvider - setting locale source
+             * and mechanism - setting default language
+             */
             // load locale files Async
             $translateProvider.useStaticFilesLoader({
                 prefix: "locales/locale-",
@@ -56,20 +55,17 @@ var winJS = WinJS !== undefined ? WinJS : null;
             // configuring prefered language
             var lang = "en-US";
             
-            // var lang =
-            // navigator.language?navigator.language:navigator.browserLanguage;
             var prefLang = lang.split("-")[0];
             if (localStorage.getItem("lang"))
                 prefLang = localStorage.getItem("lang");
             $translateProvider.preferredLanguage(prefLang);
             $translateProvider.fallbackLanguage("en");
             // ==============================================================================
-
             /*
-				 * Creating a more synthesized form of service of
-				 * $controllerProvider.register overriding .controller for
-				 * easier use
-				 */
+			 * Creating a more synthesized form of service of
+			 * $controllerProvider.register overriding .controller for
+			 * easier use
+			 */
             app.controller = $controllerProvider.register;
             app.factory = $provide.factory;
             app.value = $provide.value;
@@ -78,15 +74,11 @@ var winJS = WinJS !== undefined ? WinJS : null;
         }
     ]);
 
-    app.run(["languageHandler", "pagesHandler", "initializationHandler",
-        function (languageHandler, pagesHandler, initializationHandler) {
-    		//initializationHandler.init();    		
+    app.run(["languageHandler", "pagesHandler",
+        function (languageHandler, pagesHandler)
+         {
     		pagesHandler.resolvePagesConfigs();
-//            FastClick.attach(document.body);
-            /*if (winJS) {
-                var s = Windows.UI.ViewManagement.StatusBar.getForCurrentView();
-                s.showAsync();
-            }*/
+            FastClick.attach(document.body);
         }
     ]);
 })();

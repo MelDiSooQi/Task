@@ -59,6 +59,8 @@
 					};
 		}();
 		
+
+		// creating employee records
 		var createitems = function()
 		{
 			items = [];
