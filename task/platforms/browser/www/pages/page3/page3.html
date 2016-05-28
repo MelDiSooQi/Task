@@ -2,7 +2,7 @@
 	<div class="mainContaner" >
 		<div class="item" ng-click="item.click($event, $index, item.id);$event.stopPropagation();" ng-repeat="item in vm.items()">
 
-			<div class="rewardsItem wpButton" ng-click="vm.goDetails()">
+			<div class="rewardsItem wpButton">
 				<div class="imgCont">
 					<img ng-src="{{item.src}}" />
 				</div>

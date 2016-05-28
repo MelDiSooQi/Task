@@ -1,1 +1,0 @@
-(function() {	"use strict";	angular.module("WIFIApp").controller("aboutCtrl", [aboutCtrl]);	function aboutCtrl() {		var vm = this;	}})();

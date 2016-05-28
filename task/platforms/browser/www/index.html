@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>SayterWiFi</title>
+<title>Employee Directory</title>
 <meta name="viewport"
 	content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="viewport" content="width=device-width, height=device-height" />
@@ -13,17 +13,22 @@
 <link href="css/Galaxy_Tablets.css" 	rel="stylesheet">
 <link href="css/main.css"	 			rel="stylesheet">
 <link href="css/windowsPhone.css"	 	rel="stylesheet">
-<link href="css/mobileDevicesX615.css" rel="stylesheet">
+<link href="css/mobileDevicesX615.css"  rel="stylesheet">
 
 <script>
 	var WinJS;
 </script>
 </head>
-<body ng-app="WIFIApp" id="mainBody">
+<body ng-app="EmployeeDirectoryApp" id="mainBody">
 	<div id="busyIndicatorCont" ng-show="$root.showBusyIndicator()">
 		<div class="showbox">
 			<div class="loader">
-			<span class="loadclass">Loading...</span>
+			<div class= "loadingImage">
+				<img class="loadingGif" src="images/contactBook.png" />
+			</div>
+			<div class= "loadingTitle">
+				<span class="loadclass">Employee Directory</span>
+			</div>
 				<!-- <img class="loadingGif" src="images/loading.gif" /> -->
 			</div>
 		</div>
@@ -73,15 +78,11 @@
 		<div ng-view="" onload="$root.ngViewLoaded()"></div>
 	</div>
 	<script type="text/javascript" src="cordova.js"></script>
-	<script src="libs/winstore-jscompat.js"></script>
 	<script src="libs/lodash.min.js"></script>
-	<script src="libs/fastclick.js"></script>
-	<script src="libs/tabs.js"></script>
-	<script src="libs/uatools.js"></script>
+	<script src="libs/notneeded/fastclick.js"></script>
+	<!-- <script src="libs/notneeded/uatools.js"></script> -->
 	<script src="libs/angular.min.js"></script>
 	<script src="libs/angular-route.js"></script>
-	<script src="libs/d3.min.js"></script>
-	<script src="libs/pie-chart.min.js"></script>
 	<script src="libs/angular-touch.min.js"></script>
 	<script src="libs/angular-animate.min.js"></script>
 	<script src="libs/ng-cordova.min.js"></script>
@@ -89,16 +90,9 @@
 	<script src="libs/angular-material.js"></script>
 	<script src="libs/angular-translate.js"></script>
 	<script src="libs/loader-static-files.js"></script>
-	<script src="libs/openfb.js"></script>
-	<script src="libs/ngopenfb.js"></script>
-	<script src="libs/angular-simple-logger.min.js"></script>
-	<script src="libs/angular-google-maps.min.js"></script>
+	<!-- <script src="libs/notneeded/angular-simple-logger.min.js"></script> -->
 	<script src="libs/angular-storage.min.js"></script>
-	<script src="libs/ng-twitter-api.min.js"></script>
-	<script src="libs/sha1.js"></script>
 	<script src="libs/ngTouch.js"></script>
-	<!-- <script src="libs/base.min.js"></script>
-	<script src="libs/ui.min.js"></script> -->
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 	<script src="js/index.js"></script>
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -107,20 +101,15 @@
 	<script src="config/routes.js"></script>
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 	<script src="js/com/directives/backbutton.js"></script>
-	<script src="js/com/directives/ngButton.js"></script>
-	<script src="js/com/directives/card.js"></script>
+	
 	<script src="js/com/controllers/header.js"></script>
 	<script src="js/com/controllers/popupCtrl.js"></script>
-	<script src="js/com/controllers/sideBarCtrl.js"></script>
-	<!--<script src="js/com/plugins/NativePageTransitions.js"></script>-->
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
 	<script src="js/services/handlers/initializationHandler.js"></script>
 	<script src="js/services/handlers/employeeDirectory.js"></script>
 	<script src="js/services/handlers/languageHandler.js"></script>
 	<script src="js/services/handlers/pagesHandler.js"></script>
-
-	<script src="js/services/handlers/sideBarHandler.js"></script>
 	<script src="js/services/handlers/popupHandler.js"></script>
 	<script src="js/services/handlers/busyIndicator.js"></script>
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->

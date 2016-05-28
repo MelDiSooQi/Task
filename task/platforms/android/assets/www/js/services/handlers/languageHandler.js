@@ -1,7 +1,7 @@
 (function() {
 	'use strict';
 
-	angular.module('WIFIApp').factory('languageHandler',
+	angular.module('EmployeeDirectoryApp').factory('languageHandler',
 			[ '$translate', '$rootScope', '$q', '$timeout', languageHandler ]);
 
 	function languageHandler($translate, $rootScope, $q, $timeout) {

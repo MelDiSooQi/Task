@@ -1,7 +1,7 @@
 (function() {
 	"use strict";
 
-	angular.module("WIFIApp").factory("busyIndicator",
+	angular.module("EmployeeDirectoryApp").factory("busyIndicator",
 			[ "$rootScope", busyIndicator ]);
 
 	function busyIndicator($rootScope) {

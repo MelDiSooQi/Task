@@ -1,7 +1,7 @@
 (function () {
     "use strict";
 
-    angular.module('WIFIApp')
+    angular.module('EmployeeDirectoryApp')
         .controller("page3Ctrl", ["$scope", "$location", "store", "employeeDirectory"
                                   , page3Ctrl]);
 

@@ -1,7 +1,7 @@
 (function(){
 	"use strict";
 	
-	angular.module("WIFIApp")
+	angular.module("EmployeeDirectoryApp")
 		.factory("initializationHandler" ,[ initializationHandler]);
 	
 	function initializationHandler(profileService, locationService, store, $route){

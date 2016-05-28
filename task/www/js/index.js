@@ -3,18 +3,14 @@ var winJS = WinJS !== undefined ? WinJS : null;
     "use strict";
 
     var app = angular
-        .module("WIFIApp",
+        .module("EmployeeDirectoryApp",
         [
             "ngTouch",
             "ngRoute",
             "angular-storage",
             "pascalprecht.translate",
             "ngMaterial",
-            "n3-pie-chart",
-            "ngCordova",
-            "ngOpenFB",
-            'uiGmapgoogle-maps',
-            'ngTwitter'
+            "ngCordova"
         ]);
 
     app.config([
@@ -23,7 +19,6 @@ var winJS = WinJS !== undefined ? WinJS : null;
         "$controllerProvider",
         "$provide",
         '$compileProvider',
-        "uiGmapGoogleMapApiProvider",
         "appRoutes",
         "appConfigs",
         function ($routeProvider,
@@ -31,7 +26,6 @@ var winJS = WinJS !== undefined ? WinJS : null;
         		$controllerProvider,
         		$provide,
         		$compileProvider,
-        		uiGmapGoogleMapApiProvider,
         		appRoutes,
         		appConfigs) {
         	
@@ -45,11 +39,6 @@ var winJS = WinJS !== undefined ? WinJS : null;
                 });
             }
 
-            uiGmapGoogleMapApiProvider.configure({
-                //    key: 'your api key',
-                v: '3.20', //defaults to latest 3.X anyhow
-                libraries: 'weather,geometry,visualization'
-            });
             
             $compileProvider.imgSrcSanitizationWhitelist('images/');
 
@@ -65,16 +54,13 @@ var winJS = WinJS !== undefined ? WinJS : null;
             });
 
             // configuring prefered language
-            var lang = navigator.language;
-            if (navigator.userAgent.match(/Windows Phone/i)) {
-                lang = navigator.browserLanguage;
-            }
+            var lang = "en-US";
+            
             // var lang =
             // navigator.language?navigator.language:navigator.browserLanguage;
             var prefLang = lang.split("-")[0];
             if (localStorage.getItem("lang"))
                 prefLang = localStorage.getItem("lang");
-            Tabs.lang = prefLang;
             $translateProvider.preferredLanguage(prefLang);
             $translateProvider.fallbackLanguage("en");
             // ==============================================================================

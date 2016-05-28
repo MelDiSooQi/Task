@@ -1,7 +1,7 @@
 (function () {
     "use strict";
 
-    angular.module("WIFIApp")
+    angular.module("EmployeeDirectoryApp")
         .directive('backButton', ['$window', 'pagesHandler', backButton]);
 
     function backButton($window, pagesHandler) {

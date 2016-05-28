@@ -1,7 +1,7 @@
 (function () {
     "use strict";
 
-    angular.module('WIFIApp')
+    angular.module('EmployeeDirectoryApp')
         .controller("popupCtrl", ["popupHandler", popupCtrl]);
 
     function popupCtrl(popupHandler, settingHandler) {
@@ -24,7 +24,13 @@
     			popupHandler.popupBtn2Run();
     		}
         	popupHandler.hide();
-        	vm.purchaseQuotaCode = undefined;
+        	vm.employerName = undefined;
+            vm.jobPosition  = undefined;
+            vm.address      = undefined;
+            vm.callOffice   = undefined;
+            vm.callCell     = undefined;
+            vm.SMS          = undefined;
+            vm.email        = undefined;
         }
         
         vm.confirmPopup = function ()
@@ -34,42 +40,53 @@
     			popupHandler.popupBtn1Run();
     		}
         	popupHandler.hide();
-        	vm.purchaseQuotaCode = undefined;
+        	vm.employerName = undefined;
+            vm.jobPosition  = undefined;
+            vm.address      = undefined;
+            vm.callOffice   = undefined;
+            vm.callCell     = undefined;
+            vm.SMS          = undefined;
+            vm.email        = undefined;
         }
         
-        //--------------------purchaseQuota----
-        vm.purchaseQuotaCodeChanged = function(purchaseQuotaCode)
+        //--------------------add user----
+        vm.employerNameChanged = function(employerName)
         {
-        	popupHandler.setPurchaseQuotaCode(purchaseQuotaCode);
+        	popupHandler.setEmployerName(employerName);
         }
-        //--------------------purchaseQuota----
-        
-        
-      //--------------------language----
-        vm.getClass = function()
+
+        vm.jobPositionChanged = function(jobPosition)
         {
-        	if(settingHandler.getLanguage() == "en")
-        	{
-        		return "englishPopup";
-        	}else
-        	{
-        		return "arabicPopup";
-        	}
-        };
-        
-        vm.languageSettings = function()
-        {
-        	
-        		return "ARABIC";
-        	
-        };
-        
-        vm.cancelLanguagePopup 	= function ()
-        {
-        	popupHandler.hide();
-        	vm.purchaseQuotaCode = undefined;
+            popupHandler.setJobPosition(jobPosition);
         }
-        //--------------------language----
+
+        vm.addressChanged = function(address)
+        {
+            popupHandler.setAddress(address);
+        }
+
+        vm.callOfficeChanged = function(callOffice)
+        {
+            popupHandler.setCallOffice(callOffice);
+        }
+
+        vm.callCellChanged = function(callCell)
+        {
+            popupHandler.setCallCell(callCell);
+        }
+
+        vm.SMSChanged = function(SMS)
+        {
+            popupHandler.setSMS(SMS);
+        }
+
+        vm.emailChanged = function(email)
+        {
+            popupHandler.setEmail(email);
+        }
+        //--------------------add user----
+        
+      
         
     }
 })();

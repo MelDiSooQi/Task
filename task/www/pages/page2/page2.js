@@ -1,7 +1,7 @@
 (function () {
     "use strict";
 
-    angular.module('WIFIApp')
+    angular.module('EmployeeDirectoryApp')
         .controller("page2Ctrl", ["$scope", "$location", "store", "employeeDirectory"
                                   , page2Ctrl]);
 
@@ -22,6 +22,24 @@
       //employeeDirectory.setNotificationsReadedByIndex($index);
     }
     employeeDirectory.setOnClickCallBack(onClick);
+
+    vm.call = function(phoneNumber)
+    {
+    var call = window.open("tel:" + phoneNumber, '_system');
+    call.focus();
+    }
+
+    vm.SMS = function(phoneNumber)
+    {
+      var sendSMS = window.open("sms:" + phoneNumber, '_system');
+      sendSMS.focus();
+    }
+
+    vm.email = function(email)
+    {
+      var mailto = window.open("mailto:" + email, '_system');
+      mailto.focus();
+    }
 
     }
 })();

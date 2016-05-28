@@ -1,7 +1,7 @@
 (function () {
     "use strict";
 
-    angular.module('WIFIApp')
+    angular.module('EmployeeDirectoryApp')
         .controller("headerCtrl", ["pagesHandler","$location","$mdMenu",
                                    "$timeout","popupHandler","busyIndicator"
                                    , headerCtrl]);
@@ -10,12 +10,6 @@
     					, $timeout, popupHandler,busyIndicator)
     {
         var vm = this;
-        
-        busyIndicator.show();
-        
-        $timeout(function(){
-        	busyIndicator.hide();
-        },1000);
         
         vm.title = function(){
         	return pagesHandler.getPageProperty("pageNameKey");
@@ -47,5 +41,11 @@
         vm.togglePopup = function(){
         	$location.path("/tutorial");
         }
+
+        busyIndicator.show();
+        
+        $timeout(function(){
+            busyIndicator.hide();
+        },2500);
     }
 })();

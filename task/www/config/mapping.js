@@ -18,7 +18,7 @@
 	 * 
 	 */
 
-	angular.module("WIFIApp").value('pagesConfigs', {
+	angular.module("EmployeeDirectoryApp").value('pagesConfigs', {
 		defaults : { // defaults properties for all pages.
 			pageNameKey 			: "Etisalat HotSpot",
 			back					: "/404",

@@ -30,7 +30,12 @@ body, html, #PagesViewContainer, #sideBarBlack, #popupCont, #blurCover, #busyInd
 
 #busyIndicatorCont {
     z-index: 50;
-    background: rgb(229, 233, 232);
+    /* background: rgb(229, 233, 232); */
+    background: rgb(229, 233, 232); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgb(229, 233, 232), rgb(199, 199, 199)) !important; /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgb(229, 233, 232), rgb(199, 199, 199)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgb(229, 233, 232), rgb(199, 199, 199)) !important; /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgb(229, 233, 232), rgb(199, 199, 199)) !important; /* Standard syntax */
 }
 
 .showbox {
@@ -42,19 +47,26 @@ body, html, #PagesViewContainer, #sideBarBlack, #popupCont, #blurCover, #busyInd
 }
 
 img.loadingGif {
-    width: 100%;
+    width: 48%;
+    margin: 0px 71px;
+}
+
+.loadingTitle {
+    margin-top: 20px;
 }
 
 span.loadclass {
     font-weight: bold;
-    font-size: 37px;
+    font-size: 34px;
     color: #488fb9;
+    text-align: center;
+    font-family: inherit;
 }
 
 .loader {
   position: relative;
-  margin: 0px auto;
-  width: 164px;
+  margin: -128px auto;
+  width: 290px;
 }
 .loader:before {
   content: '';
@@ -508,7 +520,7 @@ md-menu-item.menuItem:last-child {
     top: 0px;
     bottom: 0px;
     overflow-y: auto;
-    padding-top: 53px;
+    /* padding-top: 53px; */
     -ms-overflow-style: none;
 }
 
@@ -519,7 +531,7 @@ div#page2.content {
 	top: 0px;
 	bottom: 0px;
 	overflow-y: auto;
-	padding-top: 6px;
+	/*padding-top: 6px;*/
 	-ms-overflow-style: none;
 }
 
@@ -530,7 +542,7 @@ div#page3.content {
 	top: 0px;
 	bottom: 0px;
 	overflow-y: auto;
-	padding-top: 6px;
+	/*padding-top: 6px;*/
 	-ms-overflow-style: none;
 }
 
@@ -1713,6 +1725,14 @@ border: 1px #4a4a4a solid !important;
 	margin-right: 7px;
 }
 
+img.add {
+    /* position: relative; */
+    width: 22px !important;
+    padding-top: 4px !important;
+    margin-top: 8px;
+    margin-right: -57px;
+}
+
 img.phone {
     width: 24px !important;
     padding-top: 4px !important;
@@ -1730,10 +1750,10 @@ img.mail {
 
 .rewardsItem .socialAction img {
 	width: 32px;
-	margin-left: 53PX;
+	margin-left: 60PX;
 	margin-top: -4px;
 	float: left;
-	margin-right: -26px;
+	margin-right: -20px;
 }
 
 .rewardsItem .socialAction .Like {
@@ -2053,9 +2073,6 @@ margin-right: 0;}
 	line-height: 25px;
 	font-weight: normal;
 	font-size: 14px;
-	
-	
-	
 	margin-left: -8px;
 }
 
@@ -2096,8 +2113,12 @@ margin-right: 0;}
     right: auto;
 }
 
+.mainContaner {
+    margin-top: 2px;
+}
+
 .socialAction.Facebook {
-    width: 79px;
+    width: 95px;
     /* border: 1px solid #3b5998; */
     position: absolute;
     top: 0;
@@ -2110,7 +2131,7 @@ margin-right: 0;}
 
 .Facebook .Follow {
     color: #3b5998 !important;
-    margin-left: -69px!important;
+    margin-left: -56px!important;
 }
 
 .socialAction.Facebook.ng-click-active {
@@ -2332,19 +2353,20 @@ ui-gmap-google-map {
 	
 }
 input#searchInput {
-    width: 100%;
+    width: 90%;
     height: 31px;
     padding-right: 4px;
     padding-left: 4px;
     background-color: #ffffff;
     border: 1px solid #c4c4c4;
     border-radius: 3px;
+    margin-top: 7px;
 }
 
 div#mainSearchContaner {
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
-    margin: -53px auto;
+    /* margin: -53px auto; */
     z-index: 100;
     background-color: #e1e6e5;
     border-bottom-left-radius: 6px;
@@ -2354,8 +2376,8 @@ div#mainSearchContaner {
 }
 
 div#serchContainer {
-    height: 40px;
-    margin-top: 8px;
+    height: 43px;
+    /* margin-top: 8px; */
     \: #dfe2e2;
 }
 /************** Moataz Popup common S *******************/
@@ -2476,17 +2498,16 @@ input.purchaseQuotaInput {
        border-radius: 0;
        outline: none;
        height: 2rem;
-       width: 75%;
+       width: 90%;
        font-size: 1rem;
-       
        padding: 0;
        box-shadow: none;
        -webkit-box-sizing: content-box;
        -moz-box-sizing: content-box;
        box-sizing: content-box;
        transition: all .3s;
-       
        display: inline !important;
+       margin-bottom: 6px;
     }
 
 input.purchaseQuotaInput:focus {

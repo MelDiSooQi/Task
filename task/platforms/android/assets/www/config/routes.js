@@ -1,7 +1,7 @@
 (function() {
 	"use strict";
 
-	angular.module("WIFIApp").constant("appRoutes", {
+	angular.module("EmployeeDirectoryApp").constant("appRoutes", {
 		parserMethods:{
 			getTemplateUrl:function(pageName){
 				return "pages/" + pageName + "/" + pageName + ".html";

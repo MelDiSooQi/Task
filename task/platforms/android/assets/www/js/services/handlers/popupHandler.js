@@ -1,7 +1,7 @@
 (function () {
     "use strict";
 
-    angular.module("WIFIApp")
+    angular.module("EmployeeDirectoryApp")
         .factory("popupHandler", ["$timeout", popupHandler]);
 
     function popupHandler($timeout) {
@@ -44,7 +44,13 @@
         	description	= undefined;
         	confirm 	= undefined;
         	cancel		= undefined;
-        	purchaseQuotaCode = undefined;
+        	employerName = undefined;
+            jobPosition  = undefined;
+            address      = undefined;
+            callOffice   = undefined;
+            callCell     = undefined;
+            SMS          = undefined;
+            email        = undefined;
         }
 
         var toggle = function (e) {
@@ -76,13 +82,9 @@
     								name: 'commonOneBtnPopup'	
     							, 	url	: 'popups/commonOneBtnPopup.html'
     								}
-    	,	purchaseQuotaPopup	: 	{ 
-									name: 'purchaseQuotaPopup'	
-								, 	url	: 'popups/purchaseQuotaPopup.html'
-									}
-    	,	languagePopup		: 	{ 
-									name: 'languagePopup'	
-								, 	url	: 'popups/languagePopup.html'
+    	,	addEmployeePopup	: 	{ 
+									name: 'addEmployeePopup'	
+								, 	url	: 'popups/addEmployeePopup.html'
 									}
     	};
         
@@ -171,17 +173,96 @@
     		}
         }
         
-        var purchaseQuotaCode;
+        var employerName;
         
-        var setPurchaseQuotaCode = function(_purchaseQuotaCode)
+        var setEmployerName = function(_employerName)
         {
-        	purchaseQuotaCode = _purchaseQuotaCode;
+        	employerName = _employerName;
         }
         
-        var getPurchaseQuotaCode = function()
+        var getEmployerName = function()
         {
-        	return purchaseQuotaCode;
+        	return employerName;
         }
+
+        var jobPosition;
+        
+        var setJobPosition = function(_jobPosition)
+        {
+            jobPosition = _jobPosition;
+        }
+        
+        var getJobPosition = function()
+        {
+            return jobPosition;
+        }
+
+        var address;
+        
+        var setAddress = function(_address)
+        {
+            address = _address;
+        }
+        
+        var getAddress = function()
+        {
+            return address;
+        }
+
+
+        var callOffice;
+        
+        var setCallOffice = function(_callOffice)
+        {
+            callOffice = _callOffice;
+        }
+        
+        var getCallOffice = function()
+        {
+            return callOffice;
+        }
+
+
+        var callCell;
+        
+        var setCallCell = function(_callCell)
+        {
+            callCell = _callCell;
+        }
+        
+        var getCallCell = function()
+        {
+            return callCell;
+        }
+
+
+        var SMS;
+        
+        var setSMS = function(_SMS)
+        {
+            SMS = _SMS;
+        }
+        
+        var getSMS = function()
+        {
+            return SMS;
+        }
+
+
+        var email;
+        
+        var setEmail = function(_email)
+        {
+            email = _email;
+        }
+        
+        var getEmail = function()
+        {
+            return email;
+        }
+
+
+
 
         return {
         		getPopupURL			: getPopupURL
@@ -198,8 +279,20 @@
         	,	hide				: hide
         	,	show				: show
             ,	toggle				: toggle
-            ,	setPurchaseQuotaCode: setPurchaseQuotaCode
-            ,	getPurchaseQuotaCode: getPurchaseQuotaCode
+            ,   setEmployerName     : setEmployerName
+            ,   getEmployerName     : getEmployerName
+            ,   setJobPosition      : setJobPosition
+            ,   getJobPosition      : getJobPosition
+            ,   setAddress          : setAddress
+            ,   getAddress          : getAddress
+            ,   setCallOffice       : setCallOffice
+            ,   getCallOffice       : getCallOffice
+            ,   setCallCell         : setCallCell
+            ,   getCallCell         : getCallCell
+            ,   setSMS              : setSMS
+            ,   getSMS              : getSMS
+            ,   setEmail            : setEmail
+            ,   getEmail            : getEmail
         }
     }
 })();

@@ -1,0 +1,51 @@
+<div id="purchaseQuotaPopup" class="confirm">
+  <form name="vm.userForm" ng-submit="submitVerifyForm();$event.stopPropagation();" novalidate>
+
+        <!-- mobileNumber -->
+        <div class="form" ng-class="{ 'has-error' : vm.userForm.employerName.$invalid && !vm.userForm.employerName.$pristine }">
+            <h1 class="titleLabel">{{vm.title() | translate }}</h1>
+            <p class="descriptionLabel">{{vm.description() | translate }}</p>
+            
+            <div class="inputContainer">
+	            <input class="purchaseQuotaInput" type="text" name="employerName" placeholder="Employer Name*"  ng-model="vm.employerName" ng-change="vm.employerNameChanged(vm.employerName);" ng-minlength="4" ng-maxlength="10"   maxlength="10"  required>
+
+                <input class="purchaseQuotaInput" type="text" name="jobPosition" placeholder="Job Position*"  ng-model="vm.jobPosition" ng-change="vm.jobPositionChanged(vm.jobPosition);" ng-minlength="4" ng-maxlength="10"   maxlength="10"  required>
+
+                <input class="purchaseQuotaInput" type="text" name="address" placeholder="Address*"  ng-model="vm.address" ng-change="vm.addressChanged(vm.address);" ng-minlength="2" ng-maxlength="14"   maxlength="14"  required>
+
+                <input class="purchaseQuotaInput" type="tel" name="callOffice" placeholder="Call Office*"  ng-model="vm.callOffice" ng-change="vm.callOfficeChanged(vm.callOffice);" ng-minlength="8" ng-maxlength="14"   maxlength="14"  required>
+
+                <input class="purchaseQuotaInput" type="tel" name="callCell" placeholder="Call Cell*"  ng-model="vm.callCell" ng-change="vm.callCellChanged(vm.callCell);" ng-minlength="8" ng-maxlength="14"   maxlength="14"  required>
+
+                <input class="purchaseQuotaInput" type="tel" name="SMS" placeholder="SMS*"  ng-model="vm.SMS" ng-change="vm.SMSChanged(vm.SMS);" ng-minlength="8" ng-maxlength="14"   maxlength="14"  required>
+
+                <input class="purchaseQuotaInput" type="email" name="email" placeholder="E-mail*"  ng-model="vm.email" ng-change="vm.emailChanged(vm.email);" ng-minlength="5" ng-maxlength="100"   maxlength="100"  required>
+            </div>
+            
+            <p ng-show="vm.userForm.employerName.$invalid && !vm.userForm.employerName.$pristine && vm.userForm.employerName.$touched" class="error help-block">You Employer Name is required.</p>
+            <p ng-show="vm.userForm.employerName.$error.minlength && !vm.userForm.employerName.$pristine" class="error help-block">Enter Correct Employer Name min length 4.</p>
+            <p ng-show="vm.userForm.employerName.$error.maxlength && !vm.userForm.employerName.$pristine" class="error help-block">Enter Correct Employer Name max length 10.</p>
+
+            <p ng-show="vm.userForm.jobPosition.$invalid && !vm.userForm.jobPosition.$pristine && vm.userForm.jobPosition.$touched" class="error help-block">You Job Position in valid min length 4.</p>
+
+            <p ng-show="vm.userForm.address.$invalid && !vm.userForm.address.$pristine && vm.userForm.address.$touched" class="error help-block">You Address in valid min length 2.</p>
+
+            <p ng-show="vm.userForm.callOffice.$invalid && !vm.userForm.callOffice.$pristine && vm.userForm.callOffice.$touched" class="error help-block">You call Office in valid min length 8.</p>
+
+            <p ng-show="vm.userForm.callCell.$invalid && !vm.userForm.callCell.$pristine && vm.userForm.callCell.$touched" class="error help-block">You call Cell in valid min length 8.</p>
+
+            <p ng-show="vm.userForm.SMS.$invalid && !vm.userForm.SMS.$pristine && vm.userForm.SMS.$touched" class="error help-block">You SMS in valid min length 8.</p>
+
+            <p ng-show="vm.userForm.email.$invalid && !vm.userForm.email.$pristine && vm.userForm.email.$touched" class="error help-block">You e-mail in valid min length 5.</p>
+
+        </div>
+        
+        <div class="btnContainer">
+        	<button id='cancelPopup' ng-click="vm.cancelPopup();$event.stopPropagation();">{{vm.cancel() | translate }}</button>
+  			<button id='confirmPopup' type="submit" ng-click="vm.confirmPopup();$event.stopPropagation();" ng-disabled="vm.userForm.$invalid" autofocus>{{vm.confirm() | translate }}</button>
+        </div>
+        
+        <div class="hidden hiddenLayer"></div>
+        
+    </form>
+</div>

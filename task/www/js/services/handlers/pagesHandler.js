@@ -1,13 +1,13 @@
 (function () {
     "use strict";
 
-    angular.module("WIFIApp").factory("pagesHandler",
-				["$rootScope", "pagesConfigs", "sideBarHandler", "$location", "$window",
-				 "$timeout","popupHandler"
-			 ,pagesHandler]);
+    angular.module("EmployeeDirectoryApp").factory("pagesHandler",
+				["$rootScope", "pagesConfigs", "$location", "$window",
+				 "$timeout", "popupHandler", "$route"
+			     ,pagesHandler]);
 
-    function pagesHandler($rootScope, pagesConfigs, sideBarHandler, $location, $window,
-    		$timeout,popupHandler)
+    function pagesHandler($rootScope, pagesConfigs, $location, $window
+        , $timeout, popupHandler, $route)
     {
         //private properties S/////////////////
         var currentPage = null,
@@ -36,21 +36,20 @@
         	if(popupHandler.isVisible())
         	{
         		popupHandler.hide();
+                $route.reload();
         	}
         	else
         	{
 	            back = true;
-	            if (sideBarHandler.isOpen()) {
-	                sideBarHandler.toggle();
-	            } else {
-	                if (currentPage.back.indexOf("/") !== -1) {
-	                	$timeout(function() {
-							$location.path(currentPage.back);
-						});
-	                } else {
-	                    backActions[currentPage.back]();
-	                }
-	            }
+	           
+                if (currentPage.back.indexOf("/") !== -1) {
+                	$timeout(function() {
+						$location.path(currentPage.back);
+					});
+                } else {
+                    backActions[currentPage.back]();
+                }
+	            
 	            return true;
         	}
         }
