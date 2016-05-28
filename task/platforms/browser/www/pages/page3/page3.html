@@ -1,0 +1,22 @@
+<div id="page3" class="content">
+	<div class="mainContaner" >
+		<div class="item" ng-click="item.click($event, $index, item.id);$event.stopPropagation();" ng-repeat="item in vm.items()">
+
+			<div class="rewardsItem wpButton">
+				<div class="imgCont">
+					<img ng-src="{{item.src}}" />
+				</div>
+				<div class="txtCont">
+					<h3 class="label">{{ item.title | translate }}</h3>
+					<span class="subDetails">{{ item.description | translate }}</span>
+				</div>
+				<div class="socialAction Facebook">
+				 <span class="Follow">{{ item.followers.length | translate }}</span>
+					<img src="images/page1/btnNext.png" />
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+
+</div>

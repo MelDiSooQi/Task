@@ -7,24 +7,24 @@
             <p class="descriptionLabel">{{vm.description() | translate }}</p>
             
             <div class="inputContainer">
-	            <input class="purchaseQuotaInput" type="text" name="employerName" placeholder="Employer Name*"  ng-model="vm.employerName" ng-change="vm.employerNameChanged(vm.employerName);" ng-minlength="4" ng-maxlength="10"   maxlength="10"  required>
+	            <input id="employerName" data-dependency="jobPosition" class="purchaseQuotaInput" type="text" name="employerName" placeholder="Employer Name*"  ng-model="vm.employerName" ng-change="vm.employerNameChanged(vm.employerName);" ng-minlength="4" ng-maxlength="15"   maxlength="15"  required>
 
-                <input class="purchaseQuotaInput" type="text" name="jobPosition" placeholder="Job Position*"  ng-model="vm.jobPosition" ng-change="vm.jobPositionChanged(vm.jobPosition);" ng-minlength="4" ng-maxlength="10"   maxlength="10"  required>
+                <input id="jobPosition" data-dependency="address"class="purchaseQuotaInput" type="text" name="jobPosition" placeholder="Job Position*"  ng-model="vm.jobPosition" ng-change="vm.jobPositionChanged(vm.jobPosition);" ng-minlength="4" ng-maxlength="20"   maxlength="20"  required>
 
-                <input class="purchaseQuotaInput" type="text" name="address" placeholder="Address*"  ng-model="vm.address" ng-change="vm.addressChanged(vm.address);" ng-minlength="2" ng-maxlength="14"   maxlength="14"  required>
+                <input id="address" data-dependency="callOffice" class="purchaseQuotaInput" type="text" name="address" placeholder="Address*"  ng-model="vm.address" ng-change="vm.addressChanged(vm.address);" ng-minlength="2" ng-maxlength="14"   maxlength="14"  required>
 
-                <input class="purchaseQuotaInput" type="tel" name="callOffice" placeholder="Call Office*"  ng-model="vm.callOffice" ng-change="vm.callOfficeChanged(vm.callOffice);" ng-minlength="8" ng-maxlength="14"   maxlength="14"  required>
+                <input id="callOffice" data-dependency="callCell" class="purchaseQuotaInput" type="tel" name="callOffice" placeholder="Call Office*"  ng-model="vm.callOffice" ng-change="vm.callOfficeChanged(vm.callOffice);" ng-minlength="8" ng-maxlength="14"   maxlength="14"  required>
 
-                <input class="purchaseQuotaInput" type="tel" name="callCell" placeholder="Call Cell*"  ng-model="vm.callCell" ng-change="vm.callCellChanged(vm.callCell);" ng-minlength="8" ng-maxlength="14"   maxlength="14"  required>
+                <input id="callCell" data-dependency="SMS" class="purchaseQuotaInput" type="tel" name="callCell" placeholder="Call Cell*"  ng-model="vm.callCell" ng-change="vm.callCellChanged(vm.callCell);" ng-minlength="8" ng-maxlength="14"   maxlength="14"  required>
 
-                <input class="purchaseQuotaInput" type="tel" name="SMS" placeholder="SMS*"  ng-model="vm.SMS" ng-change="vm.SMSChanged(vm.SMS);" ng-minlength="8" ng-maxlength="14"   maxlength="14"  required>
+                <input id="SMS" data-dependency="email" class="purchaseQuotaInput" type="tel" name="SMS" placeholder="SMS*"  ng-model="vm.SMS" ng-change="vm.SMSChanged(vm.SMS);" ng-minlength="8" ng-maxlength="14"   maxlength="14"  required>
 
-                <input class="purchaseQuotaInput" type="email" name="email" placeholder="E-mail*"  ng-model="vm.email" ng-change="vm.emailChanged(vm.email);" ng-minlength="5" ng-maxlength="100"   maxlength="100"  required>
+                <input id="email" class="purchaseQuotaInput" type="email" name="email" placeholder="E-mail*"  ng-model="vm.email" ng-change="vm.emailChanged(vm.email);" ng-minlength="5" ng-maxlength="100"   maxlength="100"  required>
             </div>
             
             <p ng-show="vm.userForm.employerName.$invalid && !vm.userForm.employerName.$pristine && vm.userForm.employerName.$touched" class="error help-block">You Employer Name is required.</p>
             <p ng-show="vm.userForm.employerName.$error.minlength && !vm.userForm.employerName.$pristine" class="error help-block">Enter Correct Employer Name min length 4.</p>
-            <p ng-show="vm.userForm.employerName.$error.maxlength && !vm.userForm.employerName.$pristine" class="error help-block">Enter Correct Employer Name max length 10.</p>
+            <p ng-show="vm.userForm.employerName.$error.maxlength && !vm.userForm.employerName.$pristine" class="error help-block">Enter Correct Employer Name max length 15.</p>
 
             <p ng-show="vm.userForm.jobPosition.$invalid && !vm.userForm.jobPosition.$pristine && vm.userForm.jobPosition.$touched" class="error help-block">You Job Position in valid min length 4.</p>
 
